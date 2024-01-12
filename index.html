@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Be my valentine?</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <img src="assets/homepage.jpg" alt="Hello Kitty" />
+    </div>
+    <div>
+      <button id="yesButton" onclick="redirectToAnotherPage()">YES</button>
+      <button id="noButton" onmouseover="repositionNoButton()" disabled>
+        NO
+      </button>
+    </div>
+
+    <script>
+      function redirectToAnotherPage() {
+        window.location.href = "/yes.html";
+      }
+
+      function repositionNoButton() {
+        const button = document.getElementById("noButton");
+        const screenWidth = window.innerWidth - button.clientWidth;
+        const screenHeight = window.innerHeight - button.clientHeight;
+
+        const randomX = Math.floor(Math.random() * screenWidth);
+        const randomY = Math.floor(Math.random() * screenHeight);
+
+        button.style.position = "absolute";
+        button.style.left = randomX + "px";
+        button.style.top = randomY + "px";
+      }
+    </script>
+  </body>
+</html>

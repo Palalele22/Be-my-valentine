@@ -1,0 +1,267 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #f8faf7;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.yes-body {
+    background-color: #6c96a2;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.typewriter h1 {
+    font-size: 200px;
+    color: white;
+    font-family: Impact;
+    overflow: hidden; 
+    border-right: .15em solid red; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: red; }
+  }
+
+img {
+    height: 100%;
+}
+
+button {
+    font-size: 100px;
+    font-weight: bold;
+    padding: 100px 200px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#noButton {
+    background-color: #ff0000 !important;
+    box-shadow: 0 35px #999;
+}
+
+#yesButton {
+    background-color: #6bb1ed;
+    box-shadow: 0 35px #999;
+}
+
+#cardButton {
+    background-color: red;
+}
+#cardButton:hover {
+    background-color: #d30000;
+}
+
+#yesButton:hover {background-color: #bd0000}
+
+#yesButton:active {
+  background-color: #1e6eb4;
+  box-shadow: 0 25px #666;
+  transform: translateY(4px);
+}
+
+.valentines-day-card {
+    position: relative;
+    width: 3200px; /* 400px * 8 */
+    height: 2400px; /* 300px * 8 */
+    background-color: #ff8fa3;
+    overflow: hidden;
+    border: 80px solid white; /* 10px * 8 */
+    border-radius: 80px; /* 10px * 8 */
+    box-shadow: 0 0 800px rgba(0, 0, 0, .4); /* 100px * 8 */
+}
+
+.valentines-day-card:before {
+    content:"";
+    position: absolute;
+    background-color: #ffb3c1;
+    width: 800px; /* 100px * 8 */
+    height: 800px; /* 100px * 8 */
+    border-radius: 400px; /* 50px * 8 */
+    top: 1120px; /* 140px * 8 */
+    left: -200px; /* 25px * 8 */
+    box-shadow: 480px 160px #ffb3c1, 1040px 80px #ffb3c1, 1520px 160px #ffb3c1, 2080px -40px #ffb3c1, 2720px 160px #ffb3c1;
+}
+
+.valentines-day-card:after {
+    content:"";
+    position: absolute;
+    background-color: #ffccd5;
+    width: 800px; /* 100px * 8 */
+    height: 800px; /* 100px * 8 */
+    border-radius: 400px; /* 50px * 8 */
+    top: 1280px; /* 160px * 8 */
+    left: -320px; /* 40px * 8 */
+    box-shadow: 400px 160px #ffccd5, 960px 320px #ffccd5, 1600px 120px #ffccd5, 2080px 240px #ffccd5, 2640px 240px #ffccd5, 3040px 80px #ffccd5;
+}
+
+.clouds {
+    position: absolute;
+    width: 800px; /* 100px * 8 */
+    height: 800px; /* 100px * 8 */
+    border-radius: 400px; /* 50px * 8 */
+    background-color: #fff0f3;
+    z-index: 40; /* 5 * 8 */
+    top: 1680px; /* 210px * 8 */
+    left: -160px; /* 20px * 8 */
+    box-shadow: 440px 240px #fff0f3, 1000px 80px #fff0f3, 1400px 160px #fff0f3, 2000px 80px #fff0f3, 2560px 40px #fff0f3, 3040px 80px #fff0f3;
+}
+
+.hearts {
+    position: absolute;
+    z-index: 16; /* 2 * 8 */
+}
+
+.heartOne {
+    position: absolute;
+    left: 800px; /* 100px * 8 */
+    top: 2000px; /* 250px * 8 */
+    animation: up 32s linear forwards 8s; /* 4s * 8, 1s * 8 */
+}
+
+.heartTwo {
+    position: absolute;
+    left: 2160px; /* 270px * 8 */
+    top: 1840px; /* 230px * 8 */
+    animation: up 40s linear forwards 14.4s; /* 5s * 8, 1.8s * 8 */
+}
+
+.heartThree {
+    position: absolute;
+    left: 680px; /* 85px * 8 */
+    top: 3320px; /* 415px * 8 */
+    animation: up 40s linear forwards 24s; /* 5s * 8, 3s * 8 */
+}
+
+.heartFour {
+    position: absolute;
+    left: 2560px; /* 320px * 8 */
+    top: 3040px; /* 380px * 8 */
+    animation: upTwo 72s linear infinite 28s; /* 9s * 8, 3.5s * 8 */
+}
+
+.heartFive {
+    position: absolute;
+    left: 1200px; /* 150px * 8 */
+    top: 3200px; /* 400px * 8 */
+    animation: upTwo 104s linear infinite 36s; /* 13s * 8, 4.5s * 8 */
+}
+
+.right-side:before, .right-side:after {
+    position: absolute;
+    content:"";
+    transform-origin: left;
+    animation: move 8s ease infinite; /* 1s * 8 */
+}
+
+.right-side:before {
+    border-radius: 400px 400px 400px 0; /* 50px * 8 */
+    width: 168px; /* 21px * 8 */
+    height: 160px; /* 20px * 8 */
+    background-color: #c9184a;
+    left: -2.08px; /* 0.26px * 8 */
+}
+
+.right-side:after {
+    height: 0;
+    width: 0;
+    border-bottom: 80px solid transparent; /* 10px * 8 */
+    border-left: 120px solid #c9184a; /* 15px * 8 */
+    top: 152px; /* 19px * 8 */
+    left: -2.08px; /* 0.26px * 8 */
+}
+
+@keyframes move {
+    0%, 100% { transform: rotateY(0); }
+    50% { transform: rotateY(-45deg); }
+}
+
+.left-side:before, .left-side:after {
+    position: absolute;
+    content:"";
+    transform-origin: right;
+    animation: move 8s ease infinite; /* 1s * 8 */
+}
+
+.left-side:before {
+    border-radius: 400px 400px 0 400px; /* 50px * 8 */
+    width: 160px; /* 20px * 8 */
+    height: 160px; /* 20px * 8 */
+    left: -165.6px; /* 20.7px * 8 */
+    background-color: #ff4d6d;
+}
+
+.left-side:after {
+    height: 0;
+    width: 0;
+    left: -120px; /* 15px * 8 */
+    border-bottom: 80px solid transparent; /* 10px * 8 */
+    border-right: 120px solid #ff4d6d; /* 15px * 8 */
+    top: 152px; /* 19px * 8 */
+}
+
+@keyframes up {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-2400px); /* 200px * 8 */ }
+}
+
+@keyframes upTwo {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-3600px); /* 450px * 8 */ }
+}
+
+.text {
+    position: absolute;
+    color: #800f2f;
+    font-size: 120px; /* 30px * 8 */
+    font-family: 'Pacifico', cursive;
+    line-height: 8; /* 1 * 8 */
+    text-align: center;
+    width: 3040px; /* 380px * 8 */
+    left: 80px; /* 10px * 8 */
+    z-index: 24; /* 3 * 8 */
+    top: 2560px; /* 320px * 8 */
+    animation: up 8s ease forwards; /* 1s * 8 */
+    transition: 1.6s; /* 0.2s * 8 */
+}
+
+.hover {
+    color: white;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+}
+
+.text:hover span {
+    display: none;
+}
+
+.text:hover:before {
+    content: "Remember not to eat too much candy—you're sweet enough already.";
+    font-size: 80px; /* 25px * 8 */
+}
